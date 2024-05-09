@@ -18,6 +18,8 @@ public class Register extends AppCompatActivity {
     EditText password_From_Activity;
     Button registerButton;
 
+    public static final String title = "Thanks for joining in!";
+    public static final String message = "We really appreciate it.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +32,6 @@ public class Register extends AppCompatActivity {
     }
 
     public void TryToConnect() {
-
-
         String em = email.getText().toString();
         String uN = username.getText().toString();
         String pass = password_From_Activity.getText().toString();
@@ -48,10 +48,15 @@ public class Register extends AppCompatActivity {
             Toast.makeText(this, "Nieprawidłowe hasło,", Toast.LENGTH_SHORT).show();
         } else {
             new DatabaseConnectionTask(em, uN, pass).execute();
-
             Toast.makeText(Register.this, "Utworzono użytkownika", Toast.LENGTH_SHORT).show();
+            sendMail();
         }
+    }
 
+    public void sendMail() {
+        String mail = email.getText().toString().trim();
+        JavaMailAPI javaMail = new JavaMailAPI(this, mail, title, message);
+        javaMail.execute();
     }
 
     public void registerFun(View view) {

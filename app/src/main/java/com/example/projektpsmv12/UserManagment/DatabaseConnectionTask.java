@@ -21,12 +21,12 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     protected Void  doInBackground(Void... voids) {
         connection = null;
         try {
-            String user = "2023_osak_dawid";
-            String url = "jdbc:postgresql://195.150.230.208:5432/2023_osak_dawid";
-            String password = "okon";
+            String user = "2023_chmura_daniel";
+            String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
+            String password = "Danielchmura22553307022002!";
             connection = DriverManager.getConnection(url, user, password);
             if(connection != null){
-                String query = "INSERT INTO projekt_psm.users (login, password, email) VALUES (?, ?, ?)";
+                String query = "INSERT INTO project_psm.users (login, password, email) VALUES (?, ?, ?)";
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 preparedStatement.setString(1, username);  // Pierwszy parametr to login
                 preparedStatement.setString(2, passwordStr); // Drugi parametr to hasło
