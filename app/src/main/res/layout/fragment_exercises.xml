@@ -7,270 +7,266 @@
     tools:context=".ui.exercises.ExercisesFragment"
     android:background="@color/background">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="351dp"
-        android:layout_height="625dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.878">
-
-        <ImageView
-            android:id="@+id/head"
-            android:layout_width="113dp"
-            android:layout_height="85dp"
-            android:src="@drawable/glowa"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="361dp"
+            android:layout_height="689dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.013" />
+            app:layout_constraintVertical_bias="0.878">
 
-        <ImageView
-            android:id="@+id/biceps_left_bigger"
-            android:layout_width="77dp"
-            android:layout_height="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.366"
-            app:srcCompat="@drawable/biceps_lewy" />
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="113dp"
+                    android:layout_height="85dp"
+                    android:src="@drawable/glowa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.15" />
 
-        <ImageView
-            android:id="@+id/biceps_left_smaller"
-            android:layout_width="49dp"
-            android:layout_height="73dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.171"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.393"
-            app:srcCompat="@drawable/triceps_lewy" />
+                <ImageView
+                    android:id="@+id/biceps_left_bigger"
+                    android:layout_width="77dp"
+                    android:layout_height="91dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.43"
+                    app:srcCompat="@drawable/biceps_lewy" />
 
-        <ImageView
-            android:id="@+id/chest_right"
-            android:layout_width="94dp"
-            android:layout_height="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.649"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.246"
-            app:srcCompat="@drawable/piersiowy_prawy" />
+                <ImageView
+                    android:id="@+id/biceps_left_smaller"
+                    android:layout_width="49dp"
+                    android:layout_height="73dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.185"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.445"
+                    app:srcCompat="@drawable/triceps_lewy" />
 
-        <ImageView
-            android:id="@+id/shoulder_right"
-            android:layout_width="76dp"
-            android:layout_height="80dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.863"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.237"
-            app:srcCompat="@drawable/bark_prawy" />
+                <ImageView
+                    android:id="@+id/chest_right"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.34"
+                    app:srcCompat="@drawable/piersiowy_prawy" />
 
-        <ImageView
-            android:id="@+id/chest_left"
-            android:layout_width="94dp"
-            android:layout_height="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.247"
-            app:srcCompat="@drawable/piersiowy_lewy" />
+                <ImageView
+                    android:id="@+id/shoulder_right"
+                    android:layout_width="76dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.86"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32"
+                    app:srcCompat="@drawable/bark_prawy" />
 
-        <ImageView
-            android:id="@+id/shoulder_left"
-            android:layout_width="76dp"
-            android:layout_height="80dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.12"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.237"
-            app:srcCompat="@drawable/bark_lewy" />
+                <ImageView
+                    android:id="@+id/chest_left"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.34"
+                    app:srcCompat="@drawable/piersiowy_lewy" />
 
-        <ImageView
-            android:id="@+id/trapezius_left"
-            android:layout_width="81dp"
-            android:layout_height="35dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.359"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.156"
-            app:srcCompat="@drawable/czworoboczne_lewe" />
+                <ImageView
+                    android:id="@+id/shoulder_left"
+                    android:layout_width="76dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32"
+                    app:srcCompat="@drawable/bark_lewy" />
 
-        <ImageView
-            android:id="@+id/trapezius_right"
-            android:layout_width="81dp"
-            android:layout_height="35dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.617"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.156"
-            app:srcCompat="@drawable/czworoboczne_prawe" />
+                <ImageView
+                    android:id="@+id/trapezius_left"
+                    android:layout_width="81dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.36"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+                    app:srcCompat="@drawable/czworoboczne_lewe" />
+
+                <ImageView
+                    android:id="@+id/trapezius_right"
+                    android:layout_width="81dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+                    app:srcCompat="@drawable/czworoboczne_prawe" />
 
 
-        <ImageView
-            android:id="@+id/abdominal_muscles_max_left"
-            android:layout_width="93dp"
-            android:layout_height="100dp"
-            android:src="@drawable/to_po_lewo_od_brzucha"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.332"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.417" />
+                <ImageView
+                    android:id="@+id/abdominal_muscles_max_left"
+                    android:layout_width="93dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/to_po_lewo_od_brzucha"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.49" />
 
-        <ImageView
-            android:id="@+id/abdominal_muscles_left"
-            android:layout_width="69dp"
-            android:layout_height="127dp"
-            android:src="@drawable/brzuch_lewy"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.444"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43" />
+                <ImageView
+                    android:id="@+id/abdominal_muscles_left"
+                    android:layout_width="69dp"
+                    android:layout_height="127dp"
+                    android:src="@drawable/brzuch_lewy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.53" />
 
-        <ImageView
-            android:id="@+id/abdominal_muscles_right"
-            android:layout_width="69dp"
-            android:layout_height="123dp"
-            android:src="@drawable/brzuch_prawy"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.543"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43" />
+                <ImageView
+                    android:id="@+id/abdominal_muscles_right"
+                    android:layout_width="69dp"
+                    android:layout_height="123dp"
+                    android:src="@drawable/brzuch_prawy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.55"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.53" />
 
-        <ImageView
-            android:id="@+id/biceps_right_bigger"
-            android:layout_width="77dp"
-            android:layout_height="91dp"
-            android:src="@drawable/biceps_prawy"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.903"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.366" />
+                <ImageView
+                    android:id="@+id/biceps_right_bigger"
+                    android:layout_width="77dp"
+                    android:layout_height="91dp"
+                    android:src="@drawable/biceps_prawy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.43" />
 
-        <ImageView
-            android:id="@+id/biceps_right_smaller"
-            android:layout_width="49dp"
-            android:layout_height="73dp"
-            android:src="@drawable/triceps_prawy"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.825"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.398" />
+                <ImageView
+                    android:id="@+id/biceps_right_smaller"
+                    android:layout_width="49dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/triceps_prawy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.818"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.445" />
 
-        <ImageView
-            android:id="@+id/forearm_right"
-            android:layout_width="69dp"
-            android:layout_height="83dp"
-            android:src="@drawable/przedramie_prawe"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.534" />
+                <ImageView
+                    android:id="@+id/forearm_right"
+                    android:layout_width="69dp"
+                    android:layout_height="83dp"
+                    android:src="@drawable/przedramie_prawe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.568" />
 
-        <ImageView
-            android:id="@+id/quad_left"
-            android:layout_width="111dp"
-            android:layout_height="234dp"
-            android:src="@drawable/udo_lewe"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.324"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.822" />
+                <ImageView
+                    android:id="@+id/quad_left"
+                    android:layout_width="111dp"
+                    android:layout_height="234dp"
+                    android:src="@drawable/udo_lewe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.34"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.83" />
 
-        <ImageView
-            android:id="@+id/quad_right"
-            android:layout_width="111dp"
-            android:layout_height="234dp"
-            android:src="@drawable/udo_prawe"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.686"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.822" />
+                <ImageView
+                    android:id="@+id/quad_right"
+                    android:layout_width="111dp"
+                    android:layout_height="234dp"
+                    android:src="@drawable/udo_prawe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.67"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.83" />
 
-        <ImageView
-            android:id="@+id/abdominal_muscles_max_right"
-            android:layout_width="93dp"
-            android:layout_height="100dp"
-            android:src="@drawable/to_od_brzucha_po_prawo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.653"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.422" />
+                <ImageView
+                    android:id="@+id/abdominal_muscles_max_right"
+                    android:layout_width="93dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/to_od_brzucha_po_prawo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.49" />
 
-        <ImageView
-            android:id="@+id/calf_left"
-            android:layout_width="75dp"
-            android:layout_height="107dp"
-            android:src="@drawable/lydka_lewa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.253"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+                <ImageView
+                    android:id="@+id/calf_left"
+                    android:layout_width="75dp"
+                    android:layout_height="107dp"
+                    android:src="@drawable/lydka_lewa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.28"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.97" />
 
-        <ImageView
-            android:id="@+id/calf_right"
-            android:layout_width="75dp"
-            android:layout_height="107dp"
-            android:src="@drawable/lydka_prawa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.743"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+                <ImageView
+                    android:id="@+id/calf_right"
+                    android:layout_width="75dp"
+                    android:layout_height="107dp"
+                    android:src="@drawable/lydka_prawa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.72"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.97" />
 
-        <ImageView
-            android:id="@+id/forearmLeft"
-            android:layout_width="81dp"
-            android:layout_height="87dp"
-            android:src="@drawable/przedramie_lewe"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.531" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+                <ImageView
+                    android:id="@+id/forearmLeft"
+                    android:layout_width="81dp"
+                    android:layout_height="87dp"
+                    android:src="@drawable/przedramie_lewe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.568" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

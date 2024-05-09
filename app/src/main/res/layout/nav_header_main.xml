@@ -18,6 +18,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:scaleX="1.8"
+        android:scaleY="1.8"/>
 
 </LinearLayout>
