@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -17,56 +18,96 @@ import com.example.projektpsmv12.databinding.FragmentExercisesBinding;
 public class ExercisesFragment extends Fragment {
     private FragmentExercisesBinding binding;
 
+    private ImageView[] muscleImageViews;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        ExercisesViewModel homeViewModel =
+        ExercisesViewModel exercisesViewModel =
                 new ViewModelProvider(this).get(ExercisesViewModel.class);
 
         binding = FragmentExercisesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button glowaButton = root.findViewById(R.id.glowa);
-        Button czworobocznyFrontButton = root.findViewById(R.id.czworoboczny_front);
-        Button klatkaButton = root.findViewById(R.id.klatka);
-        Button barkLewyButton = root.findViewById(R.id.bark_lewy);
-        Button barkPrawyButton = root.findViewById(R.id.bark_prawy);
-        Button brzuchButton = root.findViewById(R.id.brzuch);
-        Button biceps_lewy = root.findViewById(R.id.biceps_lewy);
-        Button biceps_prawy = root.findViewById(R.id.biceps_prawy);
-        Button przedramie_prawe = root.findViewById(R.id.przedramie_prawe);
-        Button przedramie_lewe = root.findViewById(R.id.przedramie_lewe);
-        Button udo_lewe =  root.findViewById(R.id.udo_lewe);
-        Button udo_prawe =  root.findViewById(R.id.udo_prawe);
-        Button lydka_lewa =  root.findViewById(R.id.lydka_lewa);
-        Button lydka_prawa =  root.findViewById(R.id.lydka_prawa);
-
-        glowaButton.setOnClickListener(createClickListener("glowa"));
-        czworobocznyFrontButton.setOnClickListener(createClickListener("czworoboczny_front"));
-        klatkaButton.setOnClickListener(createClickListener("klatka"));
-        barkLewyButton.setOnClickListener(createClickListener("bark"));
-        barkPrawyButton.setOnClickListener(createClickListener("bark"));
-        brzuchButton.setOnClickListener(createClickListener("brzuch"));
-        biceps_prawy.setOnClickListener(createClickListener("biceps"));
-        biceps_lewy.setOnClickListener(createClickListener("biceps"));
-        przedramie_lewe.setOnClickListener(createClickListener("przedramiona"));
-        przedramie_prawe.setOnClickListener(createClickListener("przedramiona"));
-        udo_lewe.setOnClickListener(createClickListener("czworoglowe"));
-        udo_prawe.setOnClickListener(createClickListener("czworoglowe"));
-        lydka_lewa.setOnClickListener(createClickListener("lydki"));
-        lydka_prawa.setOnClickListener(createClickListener("lydki"));
-        return root;
-
-    }
-    private View.OnClickListener createClickListener(final String muscleGroup) {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Przekazanie informacji o klikniętej grupie mięśniowej do aktywności Exercises
-                Intent intent = new Intent(getActivity(), Exercises.class);
-                intent.putExtra("muscleGroup", muscleGroup);
-                startActivity(intent);
-            }
+        // Inicjalizacja tablicy z referencjami do ImageView
+        muscleImageViews = new ImageView[]{
+                binding.bicepsLeftBigger,
+                binding.bicepsLeftSmaller,
+                binding.chestRight,
+                binding.chestLeft,
+                binding.shoulderRight,
+                binding.shoulderLeft,
+                binding.trapeziusLeft,
+                binding.trapeziusRight,
+                binding.abdominalMusclesMaxLeft,
+                binding.abdominalMusclesLeft,
+                binding.abdominalMusclesRight,
+                binding.abdominalMusclesMaxRight,
+                binding.bicepsRightBigger,
+                binding.bicepsRightSmaller,
+                binding.forearmRight,
+                binding.forearmLeft,
+                binding.quadLeft,
+                binding.quadRight,
+                binding.calfLeft,
+                binding.calfRight,
         };
+
+        // Przypisanie nasłuchiwacza zdarzeń dla każdego obrazka
+        for (int i = 0; i < muscleImageViews.length; i++) {
+            final int finalI = i;
+            muscleImageViews[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String muscleGroup = getMuscleGroup(finalI);
+                    startExercisesActivity(muscleGroup);
+                }
+            });
+        }
+
+        return root;
+    }
+
+    // Metoda pomocnicza do uzyskiwania nazwy grupy mięśniowej na podstawie indeksu obrazka
+    private String getMuscleGroup(int index) {
+        switch (index) {
+            case 0:
+            case 1:
+            case 12:
+            case 13:
+                return "biceps";
+            case 2:
+            case 3:
+                return "chest";
+            case 4:
+            case 5:
+                return "shoulder";
+            case 6:
+            case 7:
+                return "trapezius";
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                return "abdominal";
+            case 14:
+            case 15:
+                return "forearm";
+            case 16:
+            case 17:
+                return "quad";
+            case 18:
+            case 19:
+                return "calf";
+            default:
+                return "";
+        }
+    }
+
+    // Metoda pomocnicza do rozpoczęcia aktywności Exercises
+    private void startExercisesActivity(String muscleGroup) {
+        Intent intent = new Intent(getActivity(), Exercises.class);
+        intent.putExtra("muscleGroup", muscleGroup);
+        startActivity(intent);
     }
 
     @Override

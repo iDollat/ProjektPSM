@@ -8,210 +8,269 @@
     android:background="@color/background">
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tap on any muscle you want"
-        android:textColor="@color/white"
-        android:textSize="25dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="351dp"
+        android:layout_height="625dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.878">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="551dp"
-        android:layout_height="576dp"
-        android:src="@drawable/android_test"
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="113dp"
+            android:layout_height="85dp"
+            android:src="@drawable/glowa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.013" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.741" />
+        <ImageView
+            android:id="@+id/biceps_left_bigger"
+            android:layout_width="77dp"
+            android:layout_height="91dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.366"
+            app:srcCompat="@drawable/biceps_lewy" />
 
-    <Button
-        android:id="@+id/bark_lewy"
-        android:layout_width="42dp"
-        android:layout_height="43dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        <ImageView
+            android:id="@+id/biceps_left_smaller"
+            android:layout_width="49dp"
+            android:layout_height="73dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.171"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.393"
+            app:srcCompat="@drawable/triceps_lewy" />
 
-    <Button
-        android:id="@+id/udo_lewe"
-        android:layout_width="76dp"
-        android:layout_height="127dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.693" />
+        <ImageView
+            android:id="@+id/chest_right"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.649"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.246"
+            app:srcCompat="@drawable/piersiowy_prawy" />
 
-    <Button
-        android:id="@+id/przedramie_lewe"
-        android:layout_width="74dp"
-        android:layout_height="88dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.486" />
+        <ImageView
+            android:id="@+id/shoulder_right"
+            android:layout_width="76dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.863"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.237"
+            app:srcCompat="@drawable/bark_prawy" />
 
-    <Button
-        android:id="@+id/brzuch"
-        android:layout_width="89dp"
-        android:layout_height="133dp"
-        android:background="@drawable/buttonborder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.478" />
+        <ImageView
+            android:id="@+id/chest_left"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.247"
+            app:srcCompat="@drawable/piersiowy_lewy" />
 
-    <Button
-        android:id="@+id/przedramie_prawe"
-        android:layout_width="78dp"
-        android:layout_height="82dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.491" />
+        <ImageView
+            android:id="@+id/shoulder_left"
+            android:layout_width="76dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.237"
+            app:srcCompat="@drawable/bark_lewy" />
 
-    <Button
-        android:id="@+id/lydka_prawa"
-        android:layout_width="55dp"
-        android:layout_height="108dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.876" />
+        <ImageView
+            android:id="@+id/trapezius_left"
+            android:layout_width="81dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.359"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.156"
+            app:srcCompat="@drawable/czworoboczne_lewe" />
 
-    <Button
-        android:id="@+id/czworoboczny_front"
-        android:layout_width="103dp"
-        android:layout_height="29dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        <ImageView
+            android:id="@+id/trapezius_right"
+            android:layout_width="81dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.156"
+            app:srcCompat="@drawable/czworoboczne_prawe" />
 
-    <Button
-        android:id="@+id/bark_prawy"
-        android:layout_width="42dp"
-        android:layout_height="43dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
 
-    <Button
-        android:id="@+id/biceps_prawy"
-        android:layout_width="41dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.386" />
+        <ImageView
+            android:id="@+id/abdominal_muscles_max_left"
+            android:layout_width="93dp"
+            android:layout_height="100dp"
+            android:src="@drawable/to_po_lewo_od_brzucha"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.332"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.417" />
 
-    <Button
-        android:id="@+id/biceps_lewy"
-        android:layout_width="41dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.386" />
+        <ImageView
+            android:id="@+id/abdominal_muscles_left"
+            android:layout_width="69dp"
+            android:layout_height="127dp"
+            android:src="@drawable/brzuch_lewy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" />
 
-    <Button
-        android:id="@+id/glowa"
-        android:layout_width="42dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonborder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.204" />
+        <ImageView
+            android:id="@+id/abdominal_muscles_right"
+            android:layout_width="69dp"
+            android:layout_height="123dp"
+            android:src="@drawable/brzuch_prawy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" />
 
-    <Button
-        android:id="@+id/klatka"
-        android:layout_width="103dp"
-        android:layout_height="53dp"
-        android:background="@drawable/buttonborder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        <ImageView
+            android:id="@+id/biceps_right_bigger"
+            android:layout_width="77dp"
+            android:layout_height="91dp"
+            android:src="@drawable/biceps_prawy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.903"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.366" />
 
-    <Button
-        android:id="@+id/udo_prawe"
-        android:layout_width="74dp"
-        android:layout_height="127dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.635"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.692" />
+        <ImageView
+            android:id="@+id/biceps_right_smaller"
+            android:layout_width="49dp"
+            android:layout_height="73dp"
+            android:src="@drawable/triceps_prawy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.825"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.398" />
 
-    <Button
-        android:id="@+id/lydka_lewa"
-        android:layout_width="54dp"
-        android:layout_height="104dp"
-        android:background="@drawable/buttonborder"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.877" />
+        <ImageView
+            android:id="@+id/forearm_right"
+            android:layout_width="69dp"
+            android:layout_height="83dp"
+            android:src="@drawable/przedramie_prawe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.534" />
+
+        <ImageView
+            android:id="@+id/quad_left"
+            android:layout_width="111dp"
+            android:layout_height="234dp"
+            android:src="@drawable/udo_lewe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.324"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.822" />
+
+        <ImageView
+            android:id="@+id/quad_right"
+            android:layout_width="111dp"
+            android:layout_height="234dp"
+            android:src="@drawable/udo_prawe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.686"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.822" />
+
+        <ImageView
+            android:id="@+id/abdominal_muscles_max_right"
+            android:layout_width="93dp"
+            android:layout_height="100dp"
+            android:src="@drawable/to_od_brzucha_po_prawo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.653"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.422" />
+
+        <ImageView
+            android:id="@+id/calf_left"
+            android:layout_width="75dp"
+            android:layout_height="107dp"
+            android:src="@drawable/lydka_lewa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/calf_right"
+            android:layout_width="75dp"
+            android:layout_height="107dp"
+            android:src="@drawable/lydka_prawa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.743"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/forearmLeft"
+            android:layout_width="81dp"
+            android:layout_height="87dp"
+            android:src="@drawable/przedramie_lewe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.531" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
