@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ProjektPSMV12" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.ProjektPSMV12" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#86b801</item>
         <item name="colorPrimaryVariant">#c2d700</item>

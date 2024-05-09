@@ -23,7 +23,7 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
         try {
             String user = "2023_chmura_daniel";
             String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
-            String password = "Danielchmura22553307022002!";
+            String password = "okon";
             connection = DriverManager.getConnection(url, user, password);
             if(connection != null){
                 String query = "INSERT INTO project_psm.users (login, password, email) VALUES (?, ?, ?)";
