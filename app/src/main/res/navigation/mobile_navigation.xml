@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_exercises">
+
+    <fragment
+        android:id="@+id/nav_exercises"
+        android:name="com.example.projektpsmv12.ui.exercises.ExercisesFragment"
+        android:label="@string/menu_exercises"
+        tools:layout="@layout/fragment_exercises" />
+
+    <fragment
+        android:id="@+id/nav_bmi"
+        android:name="com.example.projektpsmv12.ui.bmi.BmiCalculator"
+        android:label="@string/menu_bmi"
+        tools:layout="@layout/fragment_bmi" />
+
+    <fragment
+        android:id="@+id/nav_calorie"
+        android:name="com.example.projektpsmv12.ui.calorie.CalorieCalculator"
+        android:label="@string/menu_calorie"
+        tools:layout="@layout/fragment_calorie" />
+</navigation>
