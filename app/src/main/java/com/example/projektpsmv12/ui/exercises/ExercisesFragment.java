@@ -28,10 +28,8 @@ public class ExercisesFragment extends Fragment {
 
     private SharedPreferences sharedPreferences;
     private AlertDialog popupDialog;
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        ExercisesViewModel exercisesViewModel =
-                new ViewModelProvider(this).get(ExercisesViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         binding = FragmentExercisesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
