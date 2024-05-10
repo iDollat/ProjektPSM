@@ -25,7 +25,6 @@ import com.example.projektpsmv12.databinding.FragmentExercisesBinding;
 public class ExercisesFragment extends Fragment {
     private FragmentExercisesBinding binding;
     private ImageView[] muscleImageViews;
-
     private SharedPreferences sharedPreferences;
     private AlertDialog popupDialog;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
