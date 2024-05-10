@@ -11,7 +11,7 @@
         android:layout_width="375dp"
         android:layout_height="306dp"
         android:layout_margin="10dp"
-        android:background="@drawable/popup_background"
+        android:background="@drawable/border"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,25 +24,31 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="69dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:gravity="center"
             android:text="Witaj na naszej platformie ćwiczeń !"
-            android:textSize="23dp"
+            android:textSize="22dp"
             android:layout_marginStart="5dp"/>
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="364dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:gravity="center"
             android:text="Dzięki naszym spersonalizowanym planom treningowym, możesz dostosować ćwiczenia do swoich indywidualnych celów i poziomu zaawansowania. Niezależnie od tego, czy chcesz zwiększyć masę mięśniową, spalić tłuszcz czy poprawić wytrzymałość, znajdziesz tutaj odpowiednie ćwiczenia."
             android:textSize="16dp"
-            android:layout_marginStart="5dp"/> <!--przesuniecie w prawo o 5 px-->
+            android:layout_marginStart="5dp"/>
 
         <Button
             android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start"
-            android:layout_marginStart="135dp"
-            android:layout_marginTop="40px"
-            android:onClick="hidePopUp"/>
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:layout_margin="22.5dp"
+            android:background="#c2d700"
+            android:onClick="hidePopUp"
+            android:text="Start" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
