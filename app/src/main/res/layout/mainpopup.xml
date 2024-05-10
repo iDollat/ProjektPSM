@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
 
     <LinearLayout
         android:id="@+id/popup"
-        android:layout_width="375dp"
-        android:layout_height="306dp"
+        android:layout_width="358dp"
+        android:layout_height="300dp"
         android:layout_margin="10dp"
         android:background="@drawable/border"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView2"
@@ -28,25 +25,25 @@
             android:textAlignment="center"
             android:gravity="center"
             android:text="Witaj na naszej platformie ćwiczeń !"
-            android:textSize="22dp"
-            android:layout_marginStart="5dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="364dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textAlignment="center"
             android:gravity="center"
+            android:padding="10dp"
             android:text="Dzięki naszym spersonalizowanym planom treningowym, możesz dostosować ćwiczenia do swoich indywidualnych celów i poziomu zaawansowania. Niezależnie od tego, czy chcesz zwiększyć masę mięśniową, spalić tłuszcz czy poprawić wytrzymałość, znajdziesz tutaj odpowiednie ćwiczenia."
-            android:textSize="16dp"
-            android:layout_marginStart="5dp"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/start"
             android:layout_width="330dp"
-            android:layout_height="46dp"
-            android:layout_margin="22.5dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="14dp"
             android:background="#c2d700"
             android:onClick="hidePopUp"
             android:text="Start" />
