@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/popup"
+        android:layout_width="375dp"
+        android:layout_height="306dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:text="Witaj na naszej platformie ćwiczeń !"
+            android:textSize="23dp"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:text="Dzięki naszym spersonalizowanym planom treningowym, możesz dostosować ćwiczenia do swoich indywidualnych celów i poziomu zaawansowania. Niezależnie od tego, czy chcesz zwiększyć masę mięśniową, spalić tłuszcz czy poprawić wytrzymałość, znajdziesz tutaj odpowiednie ćwiczenia."
+            android:textSize="16dp"
+            android:layout_marginStart="5dp"/> <!--przesuniecie w prawo o 5 px-->
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="40px"
+            android:onClick="hidePopUp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
