@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import android.util.Base64;
 
 public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     private String email;
@@ -21,15 +22,16 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     protected Void  doInBackground(Void... voids) {
         connection = null;
         try {
-            String user = "2023_chmura_daniel";
-            String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
-            String password = "okon";
+            String user = "?????";
+            String url = "jdbc:postgresql://195.150.230.208:5432/?????";
+            String password = "?????";
             connection = DriverManager.getConnection(url, user, password);
             if(connection != null){
                 String query = "INSERT INTO project_psm.users (login, password, email) VALUES (?, ?, ?)";
+                String hashed_password = Base64.encodeToString(passwordStr.getBytes(), Base64.DEFAULT); // Hashowanie hasła
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 preparedStatement.setString(1, username);  // Pierwszy parametr to login
-                preparedStatement.setString(2, passwordStr); // Drugi parametr to hasło
+                preparedStatement.setString(2, hashed_password); // Drugi parametr to hasło
                 preparedStatement.setString(3, email); // Trzeci parametr to email
                 preparedStatement.executeUpdate();
                 connection.close();
