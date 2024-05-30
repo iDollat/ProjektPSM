@@ -27,6 +27,7 @@ public class ExercisesFragment extends Fragment {
     private ImageView[] muscleImageViews;
     private SharedPreferences sharedPreferences;
     private AlertDialog popupDialog;
+    private Button Rotate;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         ExercisesViewModel exercisesViewModel =
@@ -34,6 +35,8 @@ public class ExercisesFragment extends Fragment {
         binding = FragmentExercisesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+
+        Rotate=binding.Rotate;
 
         muscleImageViews = new ImageView[]{
                 binding.bicepsLeftBigger,
@@ -68,6 +71,13 @@ public class ExercisesFragment extends Fragment {
                 }
             });
         }
+
+        Rotate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BackExercises();
+            }
+        });
 
         return root;
     }
@@ -155,6 +165,12 @@ public class ExercisesFragment extends Fragment {
         intent.putExtra("muscleGroup", muscleGroup);
         startActivity(intent);
     }
+    private void BackExercises(){
+        Intent intent = new Intent(getActivity(), BackExercises.class);
+        startActivity(intent);
+
+    }
+
 
     @Override
     public void onDestroyView() {

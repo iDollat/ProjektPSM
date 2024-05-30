@@ -41,5 +41,8 @@
             <!-- Additional attributes, if needed -->
         </activity>
 
+        <activity android:name=".ui.exercises.BackExercises">
+            <!-- Additional attributes, if needed -->
+        </activity>
     </application>
 </manifest>

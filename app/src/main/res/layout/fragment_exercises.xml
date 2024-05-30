@@ -8,8 +8,8 @@
     android:background="@color/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="361dp"
-        android:layout_height="689dp"
+        android:layout_width="362dp"
+        android:layout_height="702dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -267,6 +267,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.568" />
+
+        <Button
+            android:id="@+id/Rotate"
+            android:layout_width="97dp"
+            android:layout_height="47dp"
+            android:text="Roatate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.018"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.183" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
