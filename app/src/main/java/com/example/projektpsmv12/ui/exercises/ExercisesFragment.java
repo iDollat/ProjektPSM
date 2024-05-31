@@ -59,6 +59,7 @@ public class ExercisesFragment extends Fragment {
                 binding.quadRight,
                 binding.calfLeft,
                 binding.calfRight,
+
         };
       showDialog();
         for (int i = 0; i < muscleImageViews.length; i++) {

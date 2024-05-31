@@ -40,7 +40,6 @@
         <activity android:name=".ui.exercises.Exercises">
             <!-- Additional attributes, if needed -->
         </activity>
-
         <activity android:name=".ui.exercises.BackExercises">
             <!-- Additional attributes, if needed -->
         </activity>
