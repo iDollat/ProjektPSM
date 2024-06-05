@@ -27,11 +27,16 @@ public class ExercisesFragment extends Fragment {
     private ImageView[] muscleImageViews;
     private SharedPreferences sharedPreferences;
     private AlertDialog popupDialog;
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+    private Button Rotate;
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        ExercisesViewModel exercisesViewModel =
+                new ViewModelProvider(this).get(ExercisesViewModel.class);
         binding = FragmentExercisesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+
+        Rotate=binding.Rotate;
 
         muscleImageViews = new ImageView[]{
                 binding.bicepsLeftBigger,
@@ -54,6 +59,7 @@ public class ExercisesFragment extends Fragment {
                 binding.quadRight,
                 binding.calfLeft,
                 binding.calfRight,
+
         };
       showDialog();
         for (int i = 0; i < muscleImageViews.length; i++) {
@@ -66,6 +72,13 @@ public class ExercisesFragment extends Fragment {
                 }
             });
         }
+
+        Rotate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BackExercises();
+            }
+        });
 
         return root;
     }
@@ -153,6 +166,12 @@ public class ExercisesFragment extends Fragment {
         intent.putExtra("muscleGroup", muscleGroup);
         startActivity(intent);
     }
+    private void BackExercises(){
+        Intent intent = new Intent(getActivity(), BackExercises.class);
+        startActivity(intent);
+
+    }
+
 
     @Override
     public void onDestroyView() {
