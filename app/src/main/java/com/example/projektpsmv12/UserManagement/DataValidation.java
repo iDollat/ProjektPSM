@@ -1,4 +1,4 @@
-package com.example.projektpsmv12.UserManagment;
+package com.example.projektpsmv12.UserManagement;
 
 public class DataValidation {
     public boolean validateUsername(String username) {

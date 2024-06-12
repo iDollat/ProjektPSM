@@ -22,4 +22,9 @@
         android:name="com.example.projektpsmv12.ui.calorie.CalorieCalculator"
         android:label="@string/menu_calorie"
         tools:layout="@layout/fragment_calorie" />
+    <fragment
+        android:id="@+id/nav_verification"
+        android:name="com.example.projektpsmv12.UserManagement.Verification"
+        android:label="@string/menu_verification"
+        tools:layout="@layout/fragment_verification" />
 </navigation>

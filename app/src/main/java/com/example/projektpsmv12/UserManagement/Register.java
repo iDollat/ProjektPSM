@@ -1,4 +1,4 @@
-package com.example.projektpsmv12.UserManagment;
+package com.example.projektpsmv12.UserManagement;
 
 import android.content.Intent;
 import android.os.Bundle;

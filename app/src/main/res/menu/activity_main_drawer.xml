@@ -8,7 +8,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_exercises"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_exercises"
             android:title="@string/menu_exercises" />
         <item
             android:id="@+id/nav_bmi"
@@ -16,7 +16,11 @@
             android:title="@string/menu_bmi" />
         <item
             android:id="@+id/nav_calorie"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_cal"
             android:title="@string/menu_calorie" />
+        <item
+            android:id="@+id/nav_verification"
+            android:icon="@drawable/ic_menu_verification"
+            android:title="@string/menu_verification" />
     </group>
 </menu>
