@@ -18,9 +18,6 @@ public class Register extends AppCompatActivity {
     EditText password_From_Activity;
     Button registerButton;
 
-    public static final String title = "Thanks for joining in!";
-    public static final String message = "We really appreciate it.";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,16 +46,9 @@ public class Register extends AppCompatActivity {
         } else {
             new DatabaseConnectionTask(em, uN, pass).execute();
             Toast.makeText(Register.this, "Utworzono użytkownika", Toast.LENGTH_SHORT).show();
-            sendMail();
             Intent intent = new Intent(this,Login.class);
             startActivity(intent);
         }
-    }
-
-    public void sendMail() {
-        String mail = email.getText().toString().trim();
-        JavaMailAPI javaMail = new JavaMailAPI(this, mail, title, message);
-        javaMail.execute();
     }
 
     public void registerFun(View view) {

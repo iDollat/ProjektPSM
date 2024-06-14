@@ -1,7 +1,6 @@
 package com.example.projektpsmv12.UserManagement;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import java.util.Properties;
 import javax.mail.Message;
@@ -13,7 +12,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
-    private Context mContext;
+    private DatabaseConnectionTask mContext;
     private Session mSession;
     private String mEmail;
     private String mSubject;
@@ -21,7 +20,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
 
     private ProgressDialog mProgressDialog;
 
-    public JavaMailAPI(Context mContext, String mEmail, String mSubject, String mMessage) {
+    public JavaMailAPI(DatabaseConnectionTask mContext, String mEmail, String mSubject, String mMessage) {
         this.mContext = mContext;
         this.mEmail = mEmail;
         this.mSubject = mSubject;

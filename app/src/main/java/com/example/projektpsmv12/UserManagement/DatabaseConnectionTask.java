@@ -13,6 +13,8 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     private String username;
     private String passwordStr;
     private Connection connection;
+    public static final String title = "Thanks for joining in!";
+    public static String message = "We really appreciate it. Your code is: ";
     String user = "2023_chmura_daniel";
     String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
     String password = "Danielchmura22553307022002!";
@@ -45,6 +47,7 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
                 String verification_code = generateVerificationCode(); // Generowanie kodu do weryfikacji
                 preparedStatement.setString(4, verification_code);
                 preparedStatement.executeUpdate();
+                sendMail(verification_code);
                 connection.close();
             }
         } catch (SQLException e) {
@@ -53,6 +56,11 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
         return null;
     }
 
+    public void sendMail(String code) {
+        message = message + code;
+        JavaMailAPI javaMail = new JavaMailAPI(this, email, title, message);
+        javaMail.execute();
+    }
     public Connection getConnection() {
         return connection;
     }
