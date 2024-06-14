@@ -19,7 +19,7 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
         this.passwordStr = password;
     }
     @Override
-    protected Void  doInBackground(Void... voids) {
+    protected Void doInBackground(Void... voids) {
         connection = null;
         try {
             String user = "?????";
