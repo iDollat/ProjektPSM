@@ -106,18 +106,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.112"
         app:srcCompat="@drawable/logo" />
-    <Button
-        android:id="@+id/button"
-        android:layout_width="59dp"
-        android:layout_height="39dp"
-        android:background="#c2d700"
-        android:text="Back"
-        android:onClick="EnterMainActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
