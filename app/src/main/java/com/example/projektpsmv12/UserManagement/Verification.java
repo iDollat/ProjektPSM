@@ -18,6 +18,4 @@ public class Verification extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_verification, container, false);
     }
-
-
 }
