@@ -11,12 +11,21 @@ import androidx.fragment.app.Fragment;
 import com.example.projektpsmv12.R;
 
 public class Verification extends Fragment {
+    // Definiujesz zmienną logiczną
+    private boolean isVerified = false;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_verification, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // W zależności od wartości isVerified wybierasz układ
+        int layoutId = isVerified ? R.layout.fragment_verified : R.layout.fragment_verification;
+        return inflater.inflate(layoutId, container, false);
     }
 
 
