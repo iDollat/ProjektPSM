@@ -13,6 +13,11 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     private String username;
     private String passwordStr;
     private Connection connection;
+    String user = "2023_chmura_daniel";
+    String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
+    String password = "Danielchmura22553307022002!";
+
+    public DatabaseConnectionTask(){}
     public DatabaseConnectionTask(String email, String username, String password) {
         this.email = email;
         this.username = username;
@@ -29,9 +34,6 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     protected Void  doInBackground(Void... voids) {
         connection = null;
         try {
-            String user = "2023_chmura_daniel";
-            String url = "jdbc:postgresql://195.150.230.208:5432/2023_chmura_daniel";
-            String password = "Danielchmura22553307022002!";
             connection = DriverManager.getConnection(url, user, password);
             if(connection != null){
                 String query = "INSERT INTO project_psm.users (login, password, email, verification_code) VALUES (?, ?, ?, ?)";

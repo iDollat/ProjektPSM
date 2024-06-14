@@ -10,5 +10,5 @@
     <string name="menu_exercises">Exercises</string>
     <string name="menu_bmi">BMI Calculator</string>
     <string name="menu_calorie">Calorie Calculator</string>
-    <string name="menu_verification">Verifivation</string>
+    <string name="menu_verification">Verification</string>
 </resources>
