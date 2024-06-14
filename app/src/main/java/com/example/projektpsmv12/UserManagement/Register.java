@@ -50,6 +50,8 @@ public class Register extends AppCompatActivity {
             new DatabaseConnectionTask(em, uN, pass).execute();
             Toast.makeText(Register.this, "Utworzono użytkownika", Toast.LENGTH_SHORT).show();
             sendMail();
+            Intent intent = new Intent(this,Login.class);
+            startActivity(intent);
         }
     }
 
