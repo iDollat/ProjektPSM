@@ -2,9 +2,12 @@ package com.example.projektpsmv12.ui.exercises;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.example.projektpsmv12.databinding.BackExercisesBinding;
 
 public class BackExercises extends AppCompatActivity {

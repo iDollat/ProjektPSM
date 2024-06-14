@@ -27,4 +27,6 @@
         android:name="com.example.projektpsmv12.UserManagement.Verification"
         android:label="@string/menu_verification"
         tools:layout="@layout/fragment_verification" />
+
+
 </navigation>
