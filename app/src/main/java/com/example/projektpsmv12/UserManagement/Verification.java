@@ -28,6 +28,7 @@ public class Verification extends Fragment {
     private boolean isVerified = false;
     private TextView verified;
     private TextView unVerified;
+    private TextView info;
     private EditText verificationCode;
     private Button checkCode;
     private String email = Login.email;
@@ -41,8 +42,30 @@ public class Verification extends Fragment {
         unVerified = rootView.findViewById(R.id.unVerified);
         verificationCode = rootView.findViewById(R.id.verificationCode);
         checkCode = rootView.findViewById(R.id.checkCode);
-
+        info = rootView.findViewById(R.id.info);
         // Ustawienie OnClickListener dla przycisku checkCode
+        new VerificationTask(email) {
+            @Override
+            protected void onPostExecute(Boolean result) {
+                super.onPostExecute(result);
+                isVerified = result;
+
+                if (isVerified) {
+                    verified.setVisibility(View.VISIBLE);
+                    unVerified.setVisibility(View.INVISIBLE);
+                    verificationCode.setVisibility(View.INVISIBLE);
+                    checkCode.setVisibility(View.INVISIBLE);
+                    info.setVisibility(View.INVISIBLE);
+                } else {
+                    verified.setVisibility(View.INVISIBLE);
+                    unVerified.setVisibility(View.VISIBLE);
+                    verificationCode.setVisibility(View.VISIBLE);
+                    checkCode.setVisibility(View.VISIBLE);
+                    info.setVisibility(View.VISIBLE);
+                }
+            }
+        }.execute();
+
         checkCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,9 +80,15 @@ public class Verification extends Fragment {
                         isVerified = result;
 
                         if (isVerified) {
+                            verificationCode.setVisibility(View.INVISIBLE);
+                            info.setVisibility(View.INVISIBLE);
                             verified.setVisibility(View.VISIBLE);
                             unVerified.setVisibility(View.INVISIBLE);
+                            checkCode.setVisibility(View.INVISIBLE);
                         } else {
+                            checkCode.setVisibility(View.VISIBLE);
+                            verificationCode.setVisibility(View.VISIBLE);
+                            info.setVisibility(View.VISIBLE);
                             verified.setVisibility(View.INVISIBLE);
                             unVerified.setVisibility(View.VISIBLE);
                         }

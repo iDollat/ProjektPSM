@@ -13,6 +13,11 @@ public class VerificationTask extends AsyncTask<Void, Void, Boolean> {
     private String email;
     private String userEnteredCode;
 
+
+    public VerificationTask(String email) {
+        this.email = email;
+    }
+
     public VerificationTask(String email, String userEnteredCode) {
         this.email = email;
         this.userEnteredCode = userEnteredCode;
@@ -21,6 +26,7 @@ public class VerificationTask extends AsyncTask<Void, Void, Boolean> {
     @Override
     protected Boolean doInBackground(Void... voids) {
         boolean isVerified = false;
+        boolean check = false;
         String storedCode="";
 
         DatabaseConnectionTask loginCon = new DatabaseConnectionTask();
@@ -28,28 +34,37 @@ public class VerificationTask extends AsyncTask<Void, Void, Boolean> {
         try {
             Connection connection = DriverManager.getConnection(loginCon.url, loginCon.user, loginCon.password);
             if (connection != null) {
-                // Pobranie zapisanego kodu weryfikacyjnego z bazy danych
-                String queryCode = "SELECT verification_code FROM project_psm.users WHERE email = ?";
-                PreparedStatement preparedStatementCode = connection.prepareStatement(queryCode);
-                preparedStatementCode.setString(1, email);
-                ResultSet resultSetCode = preparedStatementCode.executeQuery();
-                if (resultSetCode.next()) {
-                    storedCode = resultSetCode.getString("verification_code");
-                    Log.d("VerificationTask", "Stored verification code: " + storedCode.toString());
-                }
+                String checkQuery = "SELECT verified FROM project_psm.users WHERE email = ?";
+                PreparedStatement preparedStatementCheckQuery = connection.prepareStatement(checkQuery);
+                preparedStatementCheckQuery.setString(1,email);
+                ResultSet resultSetCheckQuery = preparedStatementCheckQuery.executeQuery();
+                if(resultSetCheckQuery.next()){
+                    check=resultSetCheckQuery.getBoolean("verified");
+                    Log.d("VerificationTask", "Zweryfikowany? : " + check);
+                    if(check){
+                        isVerified = true;
+                    }else{
+                        String queryCode = "SELECT verification_code FROM project_psm.users WHERE email = ?";
+                        PreparedStatement preparedStatementCode = connection.prepareStatement(queryCode);
+                        preparedStatementCode.setString(1, email);
+                        ResultSet resultSetCode = preparedStatementCode.executeQuery();
+                        if (resultSetCode.next()) {
+                            storedCode = resultSetCode.getString("verification_code");
+                            Log.d("VerificationTask", "Stored verification code: " + storedCode.toString());
+                        }
 
-                // Porównanie kodu wprowadzonego przez użytkownika z kodem z bazy danych
-                if (storedCode.equals(userEnteredCode)) {
-                    // Jeśli się zgadzają, ustawienie verified=1 w bazie danych
-                    String updateQuery = "UPDATE project_psm.users SET verified = true WHERE email = ?";
-                    PreparedStatement updateStatement = connection.prepareStatement(updateQuery);
-                    updateStatement.setString(1, email);
-                    updateStatement.executeUpdate();
-                    isVerified = true;
+                        if (storedCode.equals(userEnteredCode)) {
+                            // Jeśli się zgadzają, ustawienie verified=1 w bazie danych
+                            String updateQuery = "UPDATE project_psm.users SET verified = true WHERE email = ?";
+                            PreparedStatement updateStatement = connection.prepareStatement(updateQuery);
+                            updateStatement.setString(1, email);
+                            updateStatement.executeUpdate();
+                            isVerified = true;
+                        }
+                        resultSetCode.close();
+                        preparedStatementCode.close();
+                    }
                 }
-
-                resultSetCode.close();
-                preparedStatementCode.close();
                 connection.close();
             }
         } catch (SQLException e) {
