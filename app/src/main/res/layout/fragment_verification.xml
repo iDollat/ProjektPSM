@@ -9,78 +9,85 @@
 
     <TextView
         android:id="@+id/verified"
-        android:layout_width="384dp"
-        android:layout_height="213dp"
-        android:background="@color/main"
-        android:text="Zweryfikowano"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="200dp"
+        android:background="@drawable/border"
+        android:text="Verified"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintVertical_bias="0.75" />
+
 
     <TextView
         android:id="@+id/unVerified"
-        android:layout_width="384dp"
-        android:layout_height="213dp"
-        android:background="@color/main"
-        android:text="Nie zweryfikowano"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:text="Not verified"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
-
+        app:layout_constraintVertical_bias="0.75" />
 
 
     <TextView
         android:id="@+id/info"
-        android:layout_width="401dp"
-        android:layout_height="79dp"
-        android:text="Wpisz kod weryfikacyjny"
-        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Enter verification code"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.105" />
 
     <EditText
         android:id="@+id/verificationCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="56dp"
+        android:background="@drawable/border"
         android:ems="10"
-        android:textSize="20dp"
-        android:text="kod tutaj"
-        android:textColor="@color/white"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.245" />
 
     <Button
         android:id="@+id/checkCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="131dp"
+        android:layout_height="46dp"
+        android:background="#c2d700"
+        android:text="Verify"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.366" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
