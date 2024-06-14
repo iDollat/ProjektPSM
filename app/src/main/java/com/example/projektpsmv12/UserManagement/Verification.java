@@ -29,6 +29,7 @@ public class Verification extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // W zależności od wartości isVerified wybierasz układ
+
         int layoutId = isVerified ? R.layout.fragment_verified : R.layout.fragment_verification;
         return inflater.inflate(layoutId, container, false);
     }

@@ -31,7 +31,7 @@ public class DatabaseConnectionTask extends AsyncTask<Void, Void, Void> {
     }
 
     @Override
-    protected Void  doInBackground(Void... voids) {
+    protected Void doInBackground(Void... voids) {
         connection = null;
         try {
             connection = DriverManager.getConnection(url, user, password);

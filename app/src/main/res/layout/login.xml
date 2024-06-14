@@ -26,7 +26,7 @@
         tools:ignore="Deprecated" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/useremail"
         android:layout_width="377dp"
         android:layout_height="56dp"
         android:background="@drawable/border"
@@ -85,7 +85,7 @@
         android:id="@+id/LoginTextView"
         android:layout_width="192dp"
         android:layout_height="34dp"
-        android:text="Login"
+        android:text="Email"
         android:textAlignment="center"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
