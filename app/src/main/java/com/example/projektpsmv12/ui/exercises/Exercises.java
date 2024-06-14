@@ -104,6 +104,14 @@ public class Exercises extends AppCompatActivity {
             return new String[]{"https://www.youtube.com/watch?v=oQ2qU4Cab0w","https://www.youtube.com/watch?v=v_c67Omje48","https://www.youtube.com/watch?v=uYumuL_G_V0","https://www.youtube.com/watch?v=0tn5K9NlCfo","https://www.youtube.com/watch?v=m0FOpMEgero","https://www.youtube.com/watch?v=_meXEWq5MOQ"};
         }else if (muscleGroup.equals("calf")) {
             return new String[]{"https://www.youtube.com/watch?v=3ZRe_QpvRPg","https://www.youtube.com/watch?v=3UWi44yN-wM","https://www.youtube.com/watch?v=XNDxCuY4l1U"};
+        }else if (muscleGroup.equals("lats")) {
+            return new String[]{"https://www.youtube.com/watch?v=JGeRYIZdojU","https://www.youtube.com/watch?v=G9uNaXGTJ4w","https://www.youtube.com/watch?v=7IV729pBFUc","https://www.youtube.com/watch?v=zVNSVxv8M8A","https://www.youtube.com/watch?v=ca95JZzzsGs","https://www.youtube.com/watch?v=VprlTxpB1rk"};
+        }else if (muscleGroup.equals("hamstring")) {
+            return new String[]{"https://www.youtube.com/watch?v=CN_7cz3P-1U","https://www.youtube.com/watch?v=GxsLrTzyGUU","https://www.youtube.com/watch?v=vHMRcECLwFM","https://www.youtube.com/watch?v=p-EfiGOK7XQ"};
+        }else if (muscleGroup.equals("glute")) {
+            return new String[]{"https://www.youtube.com/watch?v=ph3pddpKzzw","https://www.youtube.com/watch?v=L1qG25DhAk4","https://www.youtube.com/watch?v=YA-h3n9L4YU","https://www.youtube.com/watch?v=9O3lA9HsZU8"};
+        }else if (muscleGroup.equals("loins")) {
+            return new String[]{"https://www.youtube.com/watch?v=h2iKcNldw-g","https://www.youtube.com/watch?v=p6KK6yHxd4k","https://www.youtube.com/watch?v=yYUD2GwXlI8"};
         }
         return new String[]{"dupa"};
     }

@@ -23,7 +23,6 @@ public class BackExercises extends AppCompatActivity {
                 binding.ForearmRightBack,
                 binding.gluteLeft,
                 binding.gluteRight,
-                binding.HeadBack,
                 binding.LatsLeft,
                 binding.LatsRight,
                 binding.LoinsLeft,
@@ -59,7 +58,6 @@ public class BackExercises extends AppCompatActivity {
             case 3:
                 return "glute";
             case 4:
-                return "head";
             case 5:
             case 6:
                 return "lats";
@@ -68,7 +66,7 @@ public class BackExercises extends AppCompatActivity {
                 return "loins";
             case 9:
             case 10:
-                return "quad";
+                return "hamstring";
             case 11:
             case 12:
                 return "shoulder";
